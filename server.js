@@ -1,7 +1,7 @@
 // Dependencies
 const express = require('express');
 const path = require('path');
-const { v4: uuidv4 } = require('uuid');
+//const { v4: uuidv4 } = require('uuid');
 
 
 // Setting up server
@@ -29,18 +29,22 @@ app.get('/api/notes', (req, res) =>
 );
 
 // API route for "POST" request
-app.post('/api/notes', (req, res) => {
-    // save a new note based on the incoming req body
-    // title comes from req.body.title
-    // note body comes from req.body.text
-    // generate a unique notes id for the new note
-    const uniqueId = uuidv4();
-    const newNotes = {
-        id: uniqueId,
-        title: req.body.title,
-        text: req.body.text,
-    }:
-);
+// app.post('/api/notes', (req, res) => {
+//     // save a new note based on the incoming req body
+//        
+//     // title comes from req.body.title
+
+//     // note body comes from req.body.text
+//app.post('/', (req, res) => {
+//res.json({ requestBody: req.body })
+//     // generate a unique notes id for the new note
+//     const uniqueId = uuidv4();
+//     const newNotes = {
+//         id: uniqueId,
+//         title: req.body.title,
+//         text: req.body.text,
+//     };
+// );
 
 // add the new notes to the existing notes array in db.json
 
